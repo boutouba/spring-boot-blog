@@ -41,3 +41,5 @@ gradlew
 ./gradlew
 ./gradlew.bat
 gradlew.bat
+./.netbeans
+./.idea
