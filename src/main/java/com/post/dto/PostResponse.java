@@ -1,6 +1,6 @@
 package com.post.dto;
 
-import com.post.model.User;
+import com.post.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

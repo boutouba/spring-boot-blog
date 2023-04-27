@@ -1,4 +1,4 @@
-package com.post.model;
+package com.post.entity;
 
 public class Comment {
 }

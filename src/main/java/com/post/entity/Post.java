@@ -1,10 +1,7 @@
-package com.post.model;
+package com.post.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-
-import java.util.Optional;
 
 @Entity
 @Table

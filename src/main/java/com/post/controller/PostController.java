@@ -1,21 +1,20 @@
 package com.post.controller;
 
 import com.post.dto.PostRequest;
-import com.post.model.Post;
+import com.post.entity.Post;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.post.service.postService;
+import com.post.service.PostService;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/posts")
-public class postController {
+public class PostController {
 
-    private final postService postService;
+    private final PostService postService;
 
-    public postController(postService postService) {
+    public PostController(PostService postService) {
         this.postService = postService;
     }
 
@@ -26,14 +25,14 @@ public class postController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<Post>> getPost(@PathVariable int id) {
-        Optional<Post> post = postService.getPost(id);
+    public ResponseEntity<Post> getPost(@PathVariable int id) {
+        Post post = postService.getPost(id);
         return new ResponseEntity<>(post, HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity<Optional<Post>> createPost(@RequestBody PostRequest post) {
-        Optional<Post> p = postService.save(post);
+    public ResponseEntity<Post> createPost(@RequestBody PostRequest post) {
+        Post p = postService.save(post);
         return new ResponseEntity<>(p, HttpStatus.OK);
     }
 

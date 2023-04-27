@@ -1,6 +1,6 @@
 package com.post.dto;
 
-import com.post.model.User;
+import com.post.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,6 +12,6 @@ public class PostRequest {
 
     private String title;
     private String content;
-    private int user;
+    private User user;
 
 }
